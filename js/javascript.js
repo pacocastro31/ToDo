@@ -10,7 +10,7 @@ let checkboxes = document.getElementsByName("todo");
 let input = document.getElementById("newitem");
 input.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-
+        if(newitem.value != ""){
         var node = document.createElement("LI");
         var span = document.createElement("span");
         var newCheckBox = document.createElement("input");
@@ -26,5 +26,10 @@ input.addEventListener("keyup", function(event) {
 
         document.getElementById("lista").appendChild(node);
         newitem.value = "";
+        alert("se añadio correctamente")
+    }
+    else{
+        alert("Invalido. Añade un valor");
+    }
     }
 });
